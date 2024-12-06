@@ -12,14 +12,22 @@
     "drones": {
       "title": "无人机管理"
     },
-    "application": {
-      "title": "应用管理"
+    "applications": {
+      "title": "应用管理",
+      "inspection": "巡检"
     },
     "data": {
       "title": "数据管理"
     },
     "user": {
-        "logout": "退出登录"
+      "logout": "退出登录"
+    }
+  },
+  "application": {
+    "inspection": {
+      "title": "巡检",
+      "start": "开始巡检",
+      "stop": "停止巡检"
     }
   }
 }

@@ -39,11 +39,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     },
     navMain: [
       {
-        title: dictionary?.sidebar?.application?.title,
-        url: "#",
+        title: dictionary?.sidebar?.applications?.title,
+        url: "/applications",
         icon: SquareTerminal,
         isActive: true,
-        items: [],
+        items: [
+          {
+            title: dictionary?.sidebar?.applications?.inspection,
+            url: "/applications/inspection",
+          },
+        ],
       },
       {
         title: dictionary?.sidebar?.drones?.title,
