@@ -5,9 +5,7 @@ function StatisticsPanel() {
     <div className="mb-4">
       <div className="flex gap-4 justify-around">
         {Array.from({ length: 3 }).map((_, index) => (
-          // <div key={index} className="flex flex-col gap-4">
-          <Skeleton className="h-[192px] w-full rounded-xl" />
-          // </div>
+          <Skeleton key={index} className="h-[192px] w-full rounded-xl" />
         ))}
       </div>
     </div>
@@ -29,7 +27,7 @@ export default function DronesPage() {
       <div className="my-4 flex justify-between">
         <div className="flex gap-4">
           {Array.from({ length: 3 }).map((_, index) => (
-            <Skeleton className="h-12 w-[96px] rounded-xl" />
+            <Skeleton key={index} className="h-12 w-[96px] rounded-xl" />
           ))}
         </div>
 

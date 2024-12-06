@@ -6,12 +6,12 @@ import EN_CONFIG from "../dictionaries/en.json";
 export const getDictionary = (locale: Locale) => {
   if (i18n.locales.includes(locale)) {
     const dict_map = {
-      "zh": ZH_CONFIG,
-      "en": EN_CONFIG,
+      zh: ZH_CONFIG,
+      en: EN_CONFIG,
     };
     return dict_map[locale];
   }
-  return {} as any;
+  return {};
 };
 
 export const useLocale = () => {

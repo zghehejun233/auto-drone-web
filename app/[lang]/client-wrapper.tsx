@@ -1,8 +1,6 @@
 "use client";
-import { usePathname } from "next/navigation";
 import Sidebar from "./sidebar";
 import { Metadata } from "next";
-import { Locale } from "@/i18n-config";
 
 export const generateMetadata = async function ({
   params: { lang },
