@@ -1,0 +1,25 @@
+{
+  "sidebar": {
+    "platform": "平台功能",
+    "recent_project": "近期任务",
+    "support": "联系我们",
+    "feedback": "意见反馈",
+    "settings": {
+      "title": "设置",
+      "account": "账户",
+      "general": "通用"
+    },
+    "drones": {
+      "title": "无人机管理"
+    },
+    "application": {
+      "title": "应用管理"
+    },
+    "data": {
+      "title": "数据管理"
+    },
+    "user": {
+        "logout": "退出登录"
+    }
+  }
+}

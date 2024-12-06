@@ -13,17 +13,19 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { Locale } from "@/i18n-config";
+import { getDictionary } from "@/lib/dictionary";
 import { usePathname } from "next/navigation";
 
 export default function Sidebar({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: Locale };
 }>) {
-  //   将 pathname 拆分成数组
   const pathname = usePathname();
-  const pathnameArray = pathname.split("/");
-  //   过滤掉空字符串
+  const pathnameArray = pathname.split("/").slice(2);
   const pathnameArrayFiltered = pathnameArray.filter((item) => item !== "");
   //   生成面包屑导航
   const breadcrumbArray = pathnameArrayFiltered.map((item, index) => {
