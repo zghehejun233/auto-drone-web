@@ -19,10 +19,8 @@ import { usePathname } from "next/navigation";
 
 export default function Sidebar({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: Locale };
 }>) {
   const pathname = usePathname();
   const pathnameArray = pathname.split("/").slice(2);
@@ -34,7 +32,9 @@ export default function Sidebar({
         <BreadcrumbItem key={index}>
           <BreadcrumbLink href={`/${item}`}>{item}</BreadcrumbLink>
         </BreadcrumbItem>
-        <BreadcrumbSeparator />
+        {index === pathnameArrayFiltered.length - 1 ? null : (
+          <BreadcrumbSeparator />
+        )}
       </>
     );
   });
