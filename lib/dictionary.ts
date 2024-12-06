@@ -3,15 +3,50 @@ import { i18n, type Locale } from "../i18n-config";
 import ZH_CONFIG from "../dictionaries/zh.json";
 import EN_CONFIG from "../dictionaries/en.json";
 
-export const getDictionary = (locale: Locale) => {
+// 定义 dictionary 类型
+interface Dictionary {
+  sidebar: {
+    platform: string;
+    recent_project: string;
+    support: string;
+    feedback: string;
+    settings: {
+      title: string;
+      account: string;
+      general: string;
+    };
+    drones: {
+      title: string;
+    };
+    applications: {
+      title: string;
+      inspection: string;
+    };
+    data: {
+      title: string;
+    };
+    user: {
+      logout: string;
+    };
+  };
+  application: {
+    inspection: {
+      title: string;
+      start: string;
+      stop: string;
+    };
+  };
+}
+
+export const getDictionary = (locale: Locale): Dictionary => {
   if (i18n.locales.includes(locale)) {
     const dict_map = {
       zh: ZH_CONFIG,
       en: EN_CONFIG,
     };
-    return dict_map[locale];
+    return dict_map[locale] as Dictionary;
   }
-  return {};
+  return {} as Dictionary;
 };
 
 export const useLocale = () => {

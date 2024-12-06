@@ -42,7 +42,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         title: dictionary?.sidebar?.applications?.title,
         url: "/applications",
         icon: SquareTerminal,
-        isActive: true,
         items: [
           {
             title: dictionary?.sidebar?.applications?.inspection,
@@ -108,6 +107,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       },
     ],
   };
+  // eslint-disable-next-line
   return (
     <Sidebar variant="inset" {...props}>
       <SidebarHeader>
