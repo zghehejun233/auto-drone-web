@@ -21,6 +21,7 @@ interface Dictionary {
     applications: {
       title: string;
       inspection: string;
+      universal: string;
     };
     data: {
       title: string;
@@ -34,6 +35,11 @@ interface Dictionary {
       title: string;
       start: string;
       stop: string;
+    };
+    universal: {
+      action: string;
+      map: string;
+      livestream: string;
     };
   };
 }

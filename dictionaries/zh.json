@@ -14,7 +14,8 @@
     },
     "applications": {
       "title": "应用管理",
-      "inspection": "巡检"
+      "inspection": "巡检",
+      "universal": "通用应用"
     },
     "data": {
       "title": "数据管理"
@@ -28,6 +29,11 @@
       "title": "巡检",
       "start": "开始巡检",
       "stop": "停止巡检"
+    },
+    "universal": {
+      "action": "连接",
+      "map": "地图",
+      "livestream": "实时视频"
     }
   }
 }

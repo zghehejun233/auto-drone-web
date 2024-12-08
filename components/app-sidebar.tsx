@@ -44,6 +44,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         icon: SquareTerminal,
         items: [
           {
+            title: dictionary?.sidebar?.applications?.universal,
+            url: "/applications/universal",
+          },
+          {
             title: dictionary?.sidebar?.applications?.inspection,
             url: "/applications/inspection",
           },
