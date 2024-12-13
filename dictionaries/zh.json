@@ -14,7 +14,7 @@
     },
     "applications": {
       "title": "应用管理",
-      "inspection": "巡检",
+      "inspection": "巡检应用",
       "universal": "通用应用"
     },
     "data": {
@@ -27,8 +27,21 @@
   "application": {
     "inspection": {
       "title": "巡检",
-      "start": "开始巡检",
-      "stop": "停止巡检"
+      "list": {
+        "table": {
+          "id": "任务ID",
+          "name": "任务名称",
+          "owner": "所有者",
+          "status": "状态",
+          "created_at": "创建时间",
+          "last_run_at": "最后运行时间",
+          "actions": {
+            "title": "操作",
+            "edit": "编辑",
+            "view": "查看"
+          }
+        }
+      }
     },
     "universal": {
       "action": "连接",

@@ -33,8 +33,21 @@ interface Dictionary {
   application: {
     inspection: {
       title: string;
-      start: string;
-      stop: string;
+      list: {
+        table: {
+          id: string;
+          name: string;
+          owner: string;
+          status: string;
+          created_at: string;
+          last_run_at: string;
+          actions: {
+            title: string;
+            edit: string;
+            view: string;
+          };
+        };
+      };
     };
     universal: {
       action: string;
