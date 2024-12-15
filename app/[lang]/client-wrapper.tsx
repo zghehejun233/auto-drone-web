@@ -1,4 +1,6 @@
 "use client";
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Sidebar from "./sidebar";
 import { Metadata } from "next";
 
@@ -13,10 +15,16 @@ export const generateMetadata = async function ({
   };
 };
 
+const queryClient = new QueryClient();
+
 export default function ClientWrapper({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <Sidebar>{children}</Sidebar>;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Sidebar>{children}</Sidebar>
+    </QueryClientProvider>
+  );
 }
