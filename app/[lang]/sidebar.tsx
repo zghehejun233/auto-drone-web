@@ -25,14 +25,14 @@ export default function Sidebar({
   //   生成面包屑导航
   const breadcrumbArray = pathnameArrayFiltered.map((item, index) => {
     return (
-      <>
-        <BreadcrumbItem key={index}>
+      <div key={index}>
+        <BreadcrumbItem>
           <BreadcrumbLink href={`/${item}`}>{item}</BreadcrumbLink>
         </BreadcrumbItem>
         {index === pathnameArrayFiltered.length - 1 ? null : (
           <BreadcrumbSeparator />
         )}
-      </>
+      </div>
     );
   });
 
