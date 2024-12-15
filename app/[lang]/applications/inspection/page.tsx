@@ -33,6 +33,7 @@ import {
   ChevronRight,
   Delete,
   Edit,
+  RefreshCw,
   View,
 } from "lucide-react";
 import {
@@ -49,6 +50,12 @@ import {
 } from "@tanstack/match-sorter-utils";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 declare module "@tanstack/react-table" {
   //add fuzzy filter to the filterFns
@@ -251,6 +258,18 @@ export default function InspectionPage() {
   return (
     <div className="min-h-screen p-4">
       <div className="flex justify-between items-center gap-2">
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <Button variant="outline" size="icon">
+                <RefreshCw />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>刷新</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
         <Input
           className="focus-visible:ring-0 w-72"
           placeholder="搜索"
