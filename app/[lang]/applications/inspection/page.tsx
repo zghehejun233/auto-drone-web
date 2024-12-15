@@ -1,4 +1,5 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Table,
@@ -47,6 +48,7 @@ import {
   compareItems,
 } from "@tanstack/match-sorter-utils";
 import { Input } from "@/components/ui/input";
+import { useRouter } from "next/navigation";
 
 declare module "@tanstack/react-table" {
   //add fuzzy filter to the filterFns
@@ -105,6 +107,8 @@ type Task = {
 };
 
 export default function InspectionPage() {
+  const router = useRouter();
+
   const columnHelper = createColumnHelper<Task>();
   const columns = [
     columnHelper.accessor("id", {
@@ -180,7 +184,13 @@ export default function InspectionPage() {
       },
       cell: () => (
         <div className="flex gap-2 justify-center">
-          <Button variant="ghost" size="icon">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => {
+              router.replace(`/applications/inspection/11`);
+            }}
+          >
             <View />
           </Button>
           <Button variant="ghost" size="icon">
