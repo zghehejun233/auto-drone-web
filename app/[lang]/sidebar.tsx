@@ -2,7 +2,6 @@ import { AppSidebar } from "@/components/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
@@ -25,12 +24,10 @@ export default function Sidebar({
   //   生成面包屑导航
   const breadcrumbArray = pathnameArrayFiltered.map((item, index) => {
     return (
-      <div key={index}>
-        <BreadcrumbItem>
-          <BreadcrumbLink href={`/${item}`}>{item}</BreadcrumbLink>
-        </BreadcrumbItem>
+      <div key={index} className="flex items-center">
+        <BreadcrumbItem>{item}</BreadcrumbItem>
         {index === pathnameArrayFiltered.length - 1 ? null : (
-          <BreadcrumbSeparator />
+          <BreadcrumbSeparator className="ml-2" />
         )}
       </div>
     );
