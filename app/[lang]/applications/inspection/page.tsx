@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Table,
   TableBody,
@@ -261,9 +261,11 @@ export default function InspectionPage() {
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger>
-              <Button variant="outline" size="icon">
+              <div
+                className={buttonVariants({ variant: "outline", size: "icon" })}
+              >
                 <RefreshCw />
-              </Button>
+              </div>
             </TooltipTrigger>
             <TooltipContent>
               <p>刷新</p>
