@@ -46,4 +46,5 @@ const deviceTypeIcon = (status: string) => {
   }
 };
 
-export { deviceStatusStyle, historyItemStatusStyle, deviceTypeIcon };
+export { deviceStatusStyle, deviceTypeIcon, historyItemStatusStyle };
+

@@ -2,23 +2,23 @@
 
 import React from "react";
 
+import { getDeviceList, getTaskHistory } from "@/api/inspection/inspect";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Separator } from "@/components/ui/separator";
-import { getDeviceList, getTaskHistory } from "@/api/inspection/inspect";
-import {
-  deviceStatusStyle,
-  historyItemStatusStyle,
-  deviceTypeIcon,
-} from "./helper";
 import { useQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
+import {
+  deviceStatusStyle,
+  deviceTypeIcon,
+  historyItemStatusStyle,
+} from "./helper";
 
 export default function InspectionDetailPage() {
   const deviceQuery = useQuery({
@@ -43,7 +43,7 @@ export default function InspectionDetailPage() {
     <div className="p-4">
       <div className="flex gap-4 items-center">
         <div className="font-semibold text-xl">Task Name</div>
-        <Separator orientation="vertical" className="mx-2" />
+        <Separator orientation="vertical" />
         <div className="text-gray-500">1234567890</div>
         <div className="flex-grow" />
         <div>Running</div>

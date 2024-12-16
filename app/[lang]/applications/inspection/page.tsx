@@ -10,6 +10,25 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
+  compareItems,
+  RankingInfo,
+  rankItem,
+} from "@tanstack/match-sorter-utils";
 import {
   createColumnHelper,
   FilterFn,
@@ -24,7 +43,6 @@ import {
   SortingState,
   useReactTable,
 } from "@tanstack/react-table";
-import React from "react";
 import {
   ArrowUpDown,
   ChevronFirst,
@@ -36,26 +54,8 @@ import {
   RefreshCw,
   View,
 } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  RankingInfo,
-  rankItem,
-  compareItems,
-} from "@tanstack/match-sorter-utils";
-import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import React from "react";
 
 declare module "@tanstack/react-table" {
   //add fuzzy filter to the filterFns
