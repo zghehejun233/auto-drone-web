@@ -2,7 +2,7 @@
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Metadata } from "next";
-import Sidebar from "./sidebar";
+import Sidebar from "./[lang]/sidebar";
 
 export const generateMetadata = async function ({
   params: { lang },

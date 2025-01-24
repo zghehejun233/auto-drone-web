@@ -24,6 +24,11 @@ function getLocale(request: NextRequest): string {
 // 中间件
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  // 如果以 /pilot 开头，跳过
+  if (pathname.startsWith("/pilot")) {
+    return NextResponse.next();
+  }
+
   // 检查路径是否缺少语言前缀
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
